@@ -1,2 +1,2 @@
 # kooky
-nothing
+A library template for dulu
