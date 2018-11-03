@@ -22,7 +22,7 @@ deploy:
   skip_cleanup: true
   email: ta7sudan@gmail.com
   api_key:
-    secure: todo
+    secure: BFnwI34TzCXxACUsnlsipUvuDCcJWpqHEqB7g9BmHGlKVrYTANuMT98RXayVfw1z6qPJaAJhClNbG2rVGi0YY7TTdwipGJX6w0FdnYAwGDEe7cyirwaUcWy9gu/tOqYzfcXqM+KGo0SNHVwypl5oBDwaP3DNYUu6ywUHlyYPRZpBHrwy+EV4DleMit8AG3ntH8pdl5zZxGOPbXzE6pftUw41xPBQO5OV2eiD/zIesqZ0uKGiqyqjAyZMrVVZGaKzuBEIK+fsuBZcW9LDhQAPJ2nzORm1fKs+T4Wdhxt0X6/rEClV6+T3K6ncfKeHKQYXOk1/q5TJDTnObiBo2JO85jQekeKfakFABdKmLV61fgB85Vjh47ttZhS01oX3o89o+xysJdz469zKDx8zGtwSr9NjxYRQS40P8MGIjRKMCeqH4j8h7XunkLb/F9KWcupCtQ7gT7ctJBz/ip6owoYzDWNBUPqHAgRW65TQYYR5We+ZxpxHbd59ldRAUYf460yyvFDUNLv0Z8cN7Ih0OL0EiDj7v9raiHrGiUTPuSQCOBYmuaMjew976S71NMNeytYOguFcijA+Wz+JUJ1ZTmXjcrySNtZXVq/hk1kr3dhOqDidFwOkrSz9FlBZX5IhLVSRdU3Ze7nkntMRzlQjyHZXCjWvB07Q4f+XPJh/6GqHtS8=
   on:
     tags: true
     repo: ta7sudan/kooky

@@ -1,6 +1,6 @@
 import test from 'ava';
-import puppeteerHelper from './_puppeteer';
-import './_pock';
+// import puppeteerHelper from './_puppeteer';
+// import './_pock';
 
 /* global todo */
 
@@ -11,9 +11,11 @@ import './_pock';
  * 语法转换成CommonJS的(modules: false), 所以需要覆盖掉全局babel配置
  */
 
-const sleep = time => new Promise(rs => setTimeout(rs, time));
-const isObj = o => Object.prototype.toString.call(o) === '[object Object]';
+// const sleep = time => new Promise(rs => setTimeout(rs, time));
+// const isObj = o => Object.prototype.toString.call(o) === '[object Object]';
 
-test('todo', puppeteerHelper(), async (t, page) => {
-	t.pass();
-});
+// test('todo', puppeteerHelper(), async (t, page) => {
+// 	t.pass();
+// });
+
+test.skip('pass', async t => t.pass());
