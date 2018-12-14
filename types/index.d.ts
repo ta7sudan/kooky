@@ -5,7 +5,7 @@ export function setCookie(key: string, value: string, options?: {
 	secure?: boolean
 }): string;
 
-export function getCookie(key: string): string | Array;
+export function getCookie(key: string): string | Array<string>;
 
 export function removeCookie(key: string, options?: {
 	path?: string,

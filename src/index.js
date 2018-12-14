@@ -4,6 +4,9 @@ const dec = decodeURIComponent,
 	decode = s => s.replace(/(%[0-9A-Z]{2})+/g, dec);
 
 function setCookie(key, value, {expires, domain, secure, path = '/'} = {}) {
+	if (typeof value !== 'string') {
+		value = String(value);
+	}
 	key = enc(
 		key.replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, dec)
 	);
@@ -34,7 +37,7 @@ function getCookie(key) {
 }
 
 function removeCookie(key, options) {
-	setCookie(key, {
+	setCookie(key, '', {
 		...options,
 		expires: -1
 	});

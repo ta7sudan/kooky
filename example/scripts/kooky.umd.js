@@ -37,6 +37,10 @@
         _ref$path = _ref.path,
         path = _ref$path === void 0 ? '/' : _ref$path;
 
+    if (typeof value !== 'string') {
+      value = String(value);
+    }
+
     key = enc(key.replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, dec));
     value = enc(value.replace(/%(23|24|26|2B|5E|60|7C)/g, dec).replace(/[\\]/g, escape));
     var text = key + "=" + value;
@@ -65,7 +69,7 @@
   }
 
   function removeCookie(key, options) {
-    setCookie(key, _extends({}, options, {
+    setCookie(key, '', _extends({}, options, {
       expires: -1
     }));
   }
