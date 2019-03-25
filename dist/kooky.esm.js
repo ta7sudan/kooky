@@ -1,22 +1,3 @@
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-/* global false */
 var dec = decodeURIComponent,
     enc = encodeURIComponent,
     decode = function decode(s) {
@@ -32,13 +13,21 @@ function setCookie(key, value, _temp) {
       path = _ref$path === void 0 ? '/' : _ref$path;
 
   if (typeof value !== 'string') {
+    // 这里是基本类型, 可以重新赋值
+    // tslint:disable-next-line
     value = String(value);
-  }
+  } // 这里是基本类型, 可以重新赋值
+  // tslint:disable-next-line
 
-  key = enc(key.replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, dec));
+
+  key = enc(key.replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, dec)); // 这里是基本类型, 可以重新赋值
+  // tslint:disable-next-line
+
   value = enc(value.replace(/%(23|24|26|2B|5E|60|7C)/g, dec).replace(/[\\]/g, escape));
   var text = key + "=" + value;
-  text += "; path=" + path.split(';')[0];
+  text += "; path=" + path.split(';')[0]; // 这里是基本类型, 可以重新赋值
+  // tslint:disable-next-line
+
   typeof expires === 'number' && (expires = new Date(Date.now() + expires * 36e5)); // js中toUTCString和toGMTString是一样的
   // https://segmentfault.com/a/1190000006798626
 
@@ -63,10 +52,10 @@ function getCookie(key) {
 }
 
 function removeCookie(key, options) {
-  setCookie(key, '', _extends({}, options, {
+  setCookie(key, '', Object.assign({}, options, {
     expires: -1
   }));
 }
 
-export { setCookie, getCookie, removeCookie };
+export { getCookie, removeCookie, setCookie };
 //# sourceMappingURL=kooky.esm.js.map
