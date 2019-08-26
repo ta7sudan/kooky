@@ -1,4 +1,3 @@
-import { Omit } from 'type-fest';
 interface CookieOptions {
     path?: string;
     secure?: boolean;

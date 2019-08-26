@@ -1,6 +1,4 @@
 /* global DEBUG */
-import { Omit } from 'type-fest';
-
 const dec = decodeURIComponent,
 	enc = encodeURIComponent,
 	decode = (s: string): string => s.replace(/(%[0-9A-Z]{2})+/g, dec);
